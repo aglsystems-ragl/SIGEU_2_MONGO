@@ -1,0 +1,387 @@
+{
+  "info": {
+    "_postman_id": "sigeu2-mongo-seeds-0001",
+    "name": "SIGEU_2 - Seeds MongoDB (colecciones principales)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_exported_using": "ChatGPT SIGEU_2 Generator"
+  },
+  "item": [
+    {
+      "name": "POST /contrasena - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/contrasena",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "contrasena"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario_id\": \"691ba800c3779517a9735259\",\n  \"clave\": \"clave123\",\n  \"fecha_creacion\": \"2025-11-17T22:56:00.196Z\",\n  \"vigente\": true\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'contrasena', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /evaluacion_evento - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/evaluacion_evento",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "evaluacion_evento"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"justificacion\": \"Alineado con los objetivos de formación\",\n  \"acta_pdf_url\": \"http://uao.edu.co/actas/acta1.pdf\",\n  \"fecha_evaluacion\": \"2025-11-17T22:56:00.263Z\",\n  \"estado\": \"aprobado\",\n  \"evento_id\": \"691ba800c3779517a973527b\",\n  \"usuario_id\": \"691ba800c3779517a9735259\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'evaluacion_evento', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /facultad - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/facultad",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "facultad"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Facultad de Ingeniería\",\n  \"telefono\": \"6023456789\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'facultad', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /facultad_usuario - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/facultad_usuario",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "facultad_usuario"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"facultad_id\": \"691ba800c3779517a9735241\",\n  \"usuario_id\": \"691ba800c3779517a9735259\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'facultad_usuario', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /lugar - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/lugar",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "lugar"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ubicacion\": \"Auditorio Central\",\n  \"capacidad\": 200,\n  \"tipo\": \"auditorio\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'lugar', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /lugar_evento - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/lugar_evento",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "lugar_evento"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"lugar_id\": \"691ba800c3779517a9735276\",\n  \"evento_id\": \"691ba800c3779517a973527b\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'lugar_evento', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /organizacion_externa - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/organizacion_externa",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "organizacion_externa"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"TechEdu SAS\",\n  \"nombre_representante_legal\": \"Carlos Martínez\",\n  \"ubicacion\": \"Cali\",\n  \"sector_economico\": \"Tecnología\",\n  \"actividad_principal\": \"Software educativo\",\n  \"numero_contacto\": \"3001112233\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'organizacion_externa', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /participa - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/participa",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "participa"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"organizacion_id\": \"691ba800c3779517a973528a\",\n  \"evento_id\": \"691ba800c3779517a973527b\",\n  \"certificado_participacion_url\": \"http://cert1.pdf\",\n  \"asistira_representante_legal\": true\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'participa', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /programa_academico - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/programa_academico",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "programa_academico"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Ingeniería de Sistemas\",\n  \"facultad_id\": \"691ba800c3779517a9735241\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'programa_academico', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /programa_usuario - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/programa_usuario",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "programa_usuario"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"programa_id\": \"691ba800c3779517a9735246\",\n  \"usuario_id\": \"691ba800c3779517a973524a\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'programa_usuario', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /unidad_academica - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/unidad_academica",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "unidad_academica"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Unidad Académica Ingeniería de Sistemas\",\n  \"facultad_id\": \"691ba800c3779517a9735241\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'unidad_academica', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /unidad_usuario - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/unidad_usuario",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "unidad_usuario"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"unidad_id\": \"691ba800c3779517a9735243\",\n  \"usuario_id\": \"691ba800c3779517a9735254\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'unidad_usuario', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    },
+    {
+      "name": "POST /usuario_organizador - seed ejemplo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/usuario_organizador",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "usuario_organizador"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"usuario_id\": \"691ba800c3779517a973524a\",\n  \"evento_id\": \"691ba800c3779517a973527b\"\n}"
+        },
+        "description": "Semilla de ejemplo para la colección 'usuario_organizador', basada en el primer documento exportado desde MongoDB. Ajusta la URL si tu ruta FastAPI es diferente."
+      },
+      "response": []
+    }
+  ]
+}
