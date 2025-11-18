@@ -1,0 +1,4 @@
+db.organizacion_externa.updateOne(
+  { nombre: "Nueva Org" },
+  { $set: { ubicacion: "Palmira" } }
+);

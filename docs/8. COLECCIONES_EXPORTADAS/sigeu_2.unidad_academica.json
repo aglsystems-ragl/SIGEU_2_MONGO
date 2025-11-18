@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "691ba800c3779517a9735243"
+  },
+  "nombre": "Unidad Académica Ingeniería de Sistemas",
+  "facultad_id": {
+    "$oid": "691ba800c3779517a9735241"
+  }
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735244"
+  },
+  "nombre": "Unidad Académica Ingeniería Industrial",
+  "facultad_id": {
+    "$oid": "691ba800c3779517a9735241"
+  }
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735245"
+  },
+  "nombre": "Unidad Académica Administración de Empresas",
+  "facultad_id": {
+    "$oid": "691ba800c3779517a9735242"
+  }
+}]

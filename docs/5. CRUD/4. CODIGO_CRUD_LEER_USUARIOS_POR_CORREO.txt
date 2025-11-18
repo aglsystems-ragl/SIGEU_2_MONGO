@@ -1,0 +1,1 @@
+db.usuario.findOne({ correo: "pedro.perez@uao.edu.co" });

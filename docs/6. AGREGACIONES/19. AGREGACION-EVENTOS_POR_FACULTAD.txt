@@ -1,0 +1,17 @@
+db.evento.aggregate([
+  {
+    $lookup: {
+      from: "facultad",
+      localField: "facultad_id",
+      foreignField: "_id",
+      as: "facultad"
+    }
+  },
+  { $unwind: "$facultad" },
+  {
+    $group: {
+      _id: "$facultad.nombre",
+      total_eventos: { $sum: 1 }
+    }
+  }
+]);

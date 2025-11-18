@@ -1,0 +1,3166 @@
+{
+  "modelName": "SIGEU_2_Hackolade_andres_nov",
+  "collections": [
+    {
+      "collectionName": "contrasena",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_contrasena",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "d0f3af19-236a-4272-b8fb-85cf8696996f",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "fbd8562d-32f3-4ccf-9842-4a6d4a0b0238",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "c0b5f285-70a9-493d-826f-7987574f6a57",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "46b27015-fdbc-47b4-aa51-7e9d60d5cfe5",
+          "foreignCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "foreignField": [
+            "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "clave",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 80,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "description": "Hash/clave almacenable del usuario",
+          "GUID": "a5a3de41-3a10-4a89-8017-c9025f49d683",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "fecha_creacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "date",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "01d51cea-a514-4df2-aa11-0105b4d1e2d8",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "vigente",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "tinyint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 1,
+          "GUID": "9e600874-950a-4a76-8b83-71b7c60063ae",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "d58a80fc-72cc-42a8-b13d-e646b9713622"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "98430721-1cf1-497c-ba4e-946e625a598e",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Historial de contraseñas del usuario; una marcada como vigente",
+      "description": "Historial de contraseñas del usuario; una marcada como vigente",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "7eb1b89f-707a-444f-97ce-51cbbe335e80",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "7329dc45-637e-4750-a784-d7ea3506ff8b",
+          "indxName": "fk_contrasena_usuario",
+          "indxKey": [
+            {
+              "keyId": "c0b5f285-70a9-493d-826f-7987574f6a57",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "evaluacion_evento",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_evaluacion",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "e4e78a17-31b3-470b-8414-ef1982124140",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "d718fbac-4ab6-4335-96b1-05061bf5a762",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "justificacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 500,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "558f2398-7354-4f91-8171-21c74b7ec0dc",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "acta_pdf_url",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 300,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "c5795a07-af40-47fa-b451-4edd342aac2d",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "fecha_evaluacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f94728ce-1196-481d-ada6-3b832c7c52d3",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "estado",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "aprobado",
+            "rechazado"
+          ],
+          "GUID": "702ebcd6-9c7d-4780-8392-195cc3668eb2",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_evento",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "28a2d6b8-0c40-4ab4-ba1d-4d9dab43e6cf",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "0ef21a2c-73a7-4fb9-834d-c079d3cf2351",
+          "foreignCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "foreignField": [
+            "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+            "f579c077-624a-4b81-b9f7-90c778505945"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "description": "Secretario académico que evalúa proceso",
+          "precision": 11,
+          "GUID": "fd9339af-50ff-478c-8278-5a711b084404",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "e216b27d-88d8-482c-9d15-9db824f58d0b",
+          "foreignCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "foreignField": [
+            "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "8b62af80-8691-4f37-b646-35aa33b12b4e"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "1f15d992-43ef-4607-a561-1116cc109ebe",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Evaluaciones de eventos por secretaría académica",
+      "description": "Evaluaciones de eventos por secretaría académica",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "f0d70fa5-e096-4502-8ff3-afaa66eba12e",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "75b4d229-75ac-44bc-b363-662d2e58e887",
+          "indxName": "fk_ev_evento",
+          "indxKey": [
+            {
+              "keyId": "28a2d6b8-0c40-4ab4-ba1d-4d9dab43e6cf",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        },
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "4d82bc39-d8fc-4eb3-8179-c2745b93d4db",
+          "indxName": "fk_ev_usuario",
+          "indxKey": [
+            {
+              "keyId": "fd9339af-50ff-478c-8278-5a711b084404",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "evento",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_evento",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "42d4006e-f1e5-4d8d-9bcd-3dd88f15f302",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "f579c077-624a-4b81-b9f7-90c778505945",
+          "childRelationships": [
+            "0ef21a2c-73a7-4fb9-834d-c079d3cf2351",
+            "833952bd-69d6-4525-a5f8-d552d6055812",
+            "3abfaf2d-a5a7-4398-8964-72c1f1587f8f",
+            "2b6298af-54de-41a5-a84b-a814e76e7f42"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre_evento",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 200,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "af4f5780-f428-4a30-aa7e-d9e97f33636f",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "tipo",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "ludico",
+            "academico"
+          ],
+          "GUID": "ef11c7d6-ff2d-4fb6-9b16-4e350dde3dd5",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "descripcion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 800,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "7543d368-d1fe-4806-8011-a0e7b2f399df",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "fecha_evento",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "date",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "3960a4a1-14a3-40fe-9b7b-feb5f5b541f7",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "hora_inicio",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "time",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "15c4f2a1-74d7-487d-b456-259c3ef4a901",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "hora_fin",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "time",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "af794e65-dd82-4002-b768-ccfc9d5db9bb",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "estado",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "registrado",
+            "en_revision",
+            "aprobado",
+            "rechazado"
+          ],
+          "GUID": "7d6f7424-6480-4196-8bb8-a074c805e81e",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "aval_pdf_url",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 300,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4b35b3e0-2a29-43e1-8ce6-d7e78758d051",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "aval_tipo",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "director_programa",
+            "director_docencia"
+          ],
+          "GUID": "ed371c6e-fbfa-4ffc-9701-2e9d5301ae4c",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "3eb38b0a-adc2-4560-bce9-e7f6031f0e0d"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Eventos organizados por docentes/estudiantes; con aval y control de estado",
+      "description": "Eventos organizados por docentes/estudiantes; con aval y control de estado",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "2d6716a0-20c3-4cee-a23d-b4b04cf71431",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [],
+      "chkConstr": [
+        {
+          "GUID": "ba6b8beb-3f53-4cb1-9534-66ec1d2853bd",
+          "chkConstrName": "`CONSTRAINT_1`",
+          "constrExpression": "`hora_fin` > `hora_inicio`",
+          "constrEnforcement": ""
+        }
+      ],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "facultad",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_facultad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "45077b35-e934-411a-82f5-a0dd1803b6ce",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "4493d856-dfb1-42d3-a118-96cda042e70a",
+          "childRelationships": [
+            "51289279-4428-49c3-bbf9-7dcf2fc6173f",
+            "10d94d56-7e6c-4fc0-a753-91a1468b1516",
+            "c5367243-9dc0-42b0-8456-d9fd0b25dd1f"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 80,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "89bef7c1-b4be-40a3-8c61-98c284bde946",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "telefono",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 20,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "4b387689-f476-40fb-84ae-20204001c835",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "956b884e-a048-4fe5-9c68-c1613c8dd1ab"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "34a2764c-6efe-4240-af95-0355ad58105a",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Facultades con las que cuenta la universidad",
+      "description": "Facultades con las que cuenta la universidad",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "ba18bd34-a6f4-4a17-88c3-46eee2bd5153",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "facultad_usuario",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_facultad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "2194fd45-0987-436f-a28d-b03dbcc18485",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "51289279-4428-49c3-bbf9-7dcf2fc6173f",
+          "foreignCollection": "34a2764c-6efe-4240-af95-0355ad58105a",
+          "foreignField": [
+            "34a2764c-6efe-4240-af95-0355ad58105a",
+            "4493d856-dfb1-42d3-a118-96cda042e70a"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "a024280b-fc78-4579-90be-5714e9439f70",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "c0f85ac4-9386-467f-865b-03f2a2c33b6e",
+          "foreignCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "foreignField": [
+            "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "a886f036-eea6-4a93-9660-a831b969f96c"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "c5786da3-abe4-4cb0-8d34-92853148ab50",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Secretari@s académicos responsables de cada facultad (esto es validado por trigger)",
+      "description": "Secretari@s académicos responsables de cada facultad (esto es validado por trigger)",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "ef26d1b3-a2dd-490c-bfc2-c435ab066b4b",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [
+        {
+          "indexCategory": "",
+          "GUID": "8a203f80-18be-4107-80ad-76e1a8350f90",
+          "constraintName": "",
+          "compositePrimaryKey": [
+            {
+              "keyId": "2194fd45-0987-436f-a28d-b03dbcc18485",
+              "type": "ascending"
+            },
+            {
+              "keyId": "a024280b-fc78-4579-90be-5714e9439f70",
+              "type": "ascending"
+            }
+          ]
+        }
+      ],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "0a2d7922-c6c5-4b6d-9a28-636906b183e8",
+          "indxName": "fk_fu_usuario",
+          "indxKey": [
+            {
+              "keyId": "a024280b-fc78-4579-90be-5714e9439f70",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "lugar",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_lugar",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "bb94a9a8-ced2-4a68-811c-f55946facc1c",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "fa28090a-2371-42d2-8076-c35183973348",
+          "childRelationships": [
+            "f74dfc69-7b39-477f-a64c-10807aa1bf41"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "ubicacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 200,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d6547c64-5e7f-49a9-ac41-70757a0ea58f",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "capacidad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "8d0944f3-92b0-48a5-8c7c-8e65c2c94cc7",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "tipo",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "salon",
+            "auditorio",
+            "laboratorio",
+            "cancha",
+            "otro"
+          ],
+          "GUID": "2dd0e5d1-63da-49fb-8894-1161cc6bf643",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "a6f3bafa-f345-46c1-bba4-aac6997efd0d"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Espacios físicos con los que cuenta la universidad",
+      "description": "Espacios físicos con los que cuenta la universidad",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "4991c384-d7bb-4216-ae81-20a5a49d158f",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [],
+      "chkConstr": [
+        {
+          "GUID": "06d1b2b4-a013-4d84-9ff3-714722afb333",
+          "constrExpression": "`capacidad` >= 0",
+          "constrEnforcement": ""
+        }
+      ],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "lugar_evento",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_lugar",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "cf925a1f-07d5-4c23-add6-cb92f89b1a73",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "f74dfc69-7b39-477f-a64c-10807aa1bf41",
+          "foreignCollection": "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+          "foreignField": [
+            "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+            "fa28090a-2371-42d2-8076-c35183973348"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_evento",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "7c187a38-c4a1-4761-9b6d-b2bf43de0449",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "833952bd-69d6-4525-a5f8-d552d6055812",
+          "foreignCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "foreignField": [
+            "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+            "f579c077-624a-4b81-b9f7-90c778505945"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0d721a99-67a5-4903-8e3c-4438ed518e52"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "211242b5-4c59-409d-8a34-475ab46c284d",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Asignación de lugares/espacio a eventos",
+      "description": "Asignación de lugares/espacio a eventos",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "32ac67b8-9b0a-4596-a387-f17a7c678006",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [
+        {
+          "indexCategory": "",
+          "GUID": "3d7252fa-bed4-46f3-b18d-9b860453b815",
+          "constraintName": "",
+          "compositePrimaryKey": [
+            {
+              "keyId": "cf925a1f-07d5-4c23-add6-cb92f89b1a73",
+              "type": "ascending"
+            },
+            {
+              "keyId": "7c187a38-c4a1-4761-9b6d-b2bf43de0449",
+              "type": "ascending"
+            }
+          ]
+        }
+      ],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "b0ffa9f5-4038-4f1d-9f13-f23b9c7bc401",
+          "indxName": "fk_le_evento",
+          "indxKey": [
+            {
+              "keyId": "7c187a38-c4a1-4761-9b6d-b2bf43de0449",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "organizacion_externa",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_organizacion",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "872778e7-96c3-4260-81fc-ab1bb61ea8fd",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "5b76c1a0-653d-4c38-acd9-13ba4020747c",
+          "childRelationships": [
+            "317e56b8-d1d8-4dce-bd2e-05cb16282912"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "99c5ac24-0f16-4bff-8d2f-9fb0199ea154",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre_representante_legal",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "23aaa9c9-88dd-4bc5-ae50-9376914af3c9",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "ubicacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 200,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "7e080a58-e87c-44db-a2ba-c55b02d27ef4",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "sector_economico",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 90,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "9d05a74d-fb52-4821-a278-0ad2b3117205",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "actividad_principal",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "9a792bfb-9f45-4d09-8bce-0a69e77a7b79",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "numero_contacto",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 30,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "436f1265-274f-4ea7-bd9f-d15dee23839c",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "af39aa9d-6fa2-4620-a3a2-5f3212513a10"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Organizaciones externas (para participación en eventos)",
+      "description": "Organizaciones externas (para participación en eventos)",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "11039e49-c5b6-4db8-803a-13f8f0d55f3f",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "participa",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_organizacion",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "a33be35f-e30d-48d5-9c3c-f62bb88eb316",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "317e56b8-d1d8-4dce-bd2e-05cb16282912",
+          "foreignCollection": "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+          "foreignField": [
+            "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+            "5b76c1a0-653d-4c38-acd9-13ba4020747c"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_evento",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "10bf3f6f-de6b-44b0-a1d5-b2ff346448e6",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "3abfaf2d-a5a7-4398-8964-72c1f1587f8f",
+          "foreignCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "foreignField": [
+            "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+            "f579c077-624a-4b81-b9f7-90c778505945"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "certificado_participacion_url",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 300,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "8440a097-d101-4b4d-9802-d82b4aa99458",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "asistira_representante_legal",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "tinyint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 1,
+          "GUID": "054782ec-c719-4840-903b-004ab47f73d7",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre_representante_alternativo",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "",
+          "GUID": "9726a527-2ca1-4256-8f1c-de549839a0c9",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "e3a442d5-bee0-42fb-9b19-6cb34ad9d96b"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Participación de organizaciones externas por cada evento",
+      "description": "Participación de organizaciones externas por cada evento",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "2ad11d20-a1a4-460f-b8d1-324f95525c36",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [
+        {
+          "indexCategory": "",
+          "GUID": "2aa4a4b3-14a6-47ff-9b6b-6a8440cd2fdc",
+          "constraintName": "",
+          "compositePrimaryKey": [
+            {
+              "keyId": "a33be35f-e30d-48d5-9c3c-f62bb88eb316",
+              "type": "ascending"
+            },
+            {
+              "keyId": "10bf3f6f-de6b-44b0-a1d5-b2ff346448e6",
+              "type": "ascending"
+            }
+          ]
+        }
+      ],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "cb71e3df-81e9-4c53-9739-8247133df427",
+          "indxName": "fk_pa_evento",
+          "indxKey": [
+            {
+              "keyId": "10bf3f6f-de6b-44b0-a1d5-b2ff346448e6",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "programa_academico",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_programa",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "0c3c9e3e-7c0b-4381-9bb0-b82a6505360d",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "bc27905d-2261-48ad-a1f6-e4d1c773793b",
+          "childRelationships": [
+            "79ea4602-a7a1-45ca-9590-ed287c7e5f40"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 90,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f2dae832-821b-4351-ba3a-b763eb55dd41",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_facultad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "1f9147a1-c877-4c48-a057-eeedf171a8be",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "10d94d56-7e6c-4fc0-a753-91a1468b1516",
+          "foreignCollection": "34a2764c-6efe-4240-af95-0355ad58105a",
+          "foreignField": [
+            "34a2764c-6efe-4240-af95-0355ad58105a",
+            "4493d856-dfb1-42d3-a118-96cda042e70a"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "9c99bdcd-ae41-4ef4-9250-6abf4b7e3bdb"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Programas académicosque estan adscritos a una facultad",
+      "description": "Programas académicosque estan adscritos a una facultad",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "1a5297e3-ee67-4058-9e33-df1829c1ebe0",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "0674fae2-af91-4f97-9567-f72950f75ddb",
+          "indxName": "fk_programa_facultad",
+          "indxKey": [
+            {
+              "keyId": "1f9147a1-c877-4c48-a057-eeedf171a8be",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "programa_usuario",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_programa",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "907b64d2-1dba-467a-a73c-e03a16477534",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "79ea4602-a7a1-45ca-9590-ed287c7e5f40",
+          "foreignCollection": "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+          "foreignField": [
+            "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+            "bc27905d-2261-48ad-a1f6-e4d1c773793b"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "39840856-6837-4d80-a5d0-b898223ff9c3",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "ba509577-81b3-43b6-b763-e47f6c53d41a",
+          "foreignCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "foreignField": [
+            "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "303c5bd4-6c55-46d1-88cc-efaa16ff1174"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "0457e689-045e-4920-bf25-05fc3658c8c2",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Membresía de usuarios a programas (solo estudiantes; validado por trigger)",
+      "description": "Membresía de usuarios a programas (solo estudiantes; validado por trigger)",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "8e945b40-aec9-432e-bb12-6610bbda1e30",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [
+        {
+          "indexCategory": "",
+          "GUID": "4ff4a8e4-7e9f-4154-9673-c554beaacebf",
+          "constraintName": "",
+          "compositePrimaryKey": [
+            {
+              "keyId": "907b64d2-1dba-467a-a73c-e03a16477534",
+              "type": "ascending"
+            },
+            {
+              "keyId": "39840856-6837-4d80-a5d0-b898223ff9c3",
+              "type": "ascending"
+            }
+          ]
+        }
+      ],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "47d72624-3fe6-4eb7-8f27-89aa85df8bde",
+          "indxName": "fk_pu_usuario",
+          "indxKey": [
+            {
+              "keyId": "39840856-6837-4d80-a5d0-b898223ff9c3",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "unidad_academica",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_unidad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "5b6b6d5f-329b-4fa9-8024-419d5165b59a",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "86fc6724-1c79-4784-b558-2a03d91ac570",
+          "childRelationships": [
+            "88e2f5e3-489d-48be-84d5-32f63314f96d"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 90,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "1a19787c-eec0-4dad-a305-911b5a455254",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_facultad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "3f4049a0-110d-44bc-a26f-7d47845b9c04",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "c5367243-9dc0-42b0-8456-d9fd0b25dd1f",
+          "foreignCollection": "34a2764c-6efe-4240-af95-0355ad58105a",
+          "foreignField": [
+            "34a2764c-6efe-4240-af95-0355ad58105a",
+            "4493d856-dfb1-42d3-a118-96cda042e70a"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "16d7f79c-db27-49c9-883f-4c25934ec119"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Unidades académicas adscritas a una facultad en la universidad",
+      "description": "Unidades académicas adscritas a una facultad en la universidad",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "18a4cd4a-e0fd-4ea4-a830-0211fb434abf",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "290a8bb9-a8d8-49c7-a7a5-84639738e537",
+          "indxName": "fk_unidad_facultad",
+          "indxKey": [
+            {
+              "keyId": "3f4049a0-110d-44bc-a26f-7d47845b9c04",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "unidad_usuario",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_unidad",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "a4ec97ee-5ced-47fc-a93c-6e77c3555053",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "88e2f5e3-489d-48be-84d5-32f63314f96d",
+          "foreignCollection": "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+          "foreignField": [
+            "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+            "86fc6724-1c79-4784-b558-2a03d91ac570"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "7e8cea51-5e85-4663-810e-7004f0273467",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "c9abfe90-81a7-4e0c-b47c-13d1f9ca3677",
+          "foreignCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "foreignField": [
+            "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "32d1b440-baec-4350-8c26-2b05f79b3eb1"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Adscripción de docentes a unidades académicas (este procesos se valida por trigger)",
+      "description": "Adscripción de docentes a unidades académicas (este procesos se valida por trigger)",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "24828590-cfac-4d71-8499-9f05a3a6f643",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [
+        {
+          "indexCategory": "",
+          "GUID": "79b55abb-2610-4f50-982b-7a8dcf843dde",
+          "constraintName": "",
+          "compositePrimaryKey": [
+            {
+              "keyId": "a4ec97ee-5ced-47fc-a93c-6e77c3555053",
+              "type": "ascending"
+            },
+            {
+              "keyId": "7e8cea51-5e85-4663-810e-7004f0273467",
+              "type": "ascending"
+            }
+          ]
+        }
+      ],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "c5d4be91-04e2-4249-b376-dd0c5e431dbf",
+          "indxName": "fk_uu_usuario",
+          "indxKey": [
+            {
+              "keyId": "7e8cea51-5e85-4663-810e-7004f0273467",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "usuario",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "description": "Identificador unico del usuario",
+          "precision": 11,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "a0835f94-8fdb-404f-af53-841e246ee564",
+            "constraintName": "",
+            "order": "ASC"
+          },
+          "GUID": "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0",
+          "childRelationships": [
+            "46b27015-fdbc-47b4-aa51-7e9d60d5cfe5",
+            "e216b27d-88d8-482c-9d15-9db824f58d0b",
+            "c0f85ac4-9386-467f-865b-03f2a2c33b6e",
+            "ba509577-81b3-43b6-b763-e47f6c53d41a",
+            "c9abfe90-81a7-4e0c-b47c-13d1f9ca3677",
+            "78e7f3f7-19b3-4f82-b01d-a29d7dd2f49e"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 50,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "description": "Nombre del usuario en el sistema",
+          "GUID": "4aea5295-f279-407f-a85e-e35f6459ff19",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "apellido",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 50,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "description": "Apellido del usuario",
+          "GUID": "a9bb6e1a-a39f-440d-bb60-59a5dff2dfff",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "correo",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": true,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "description": "Correo institucional del usuario",
+          "uniqueKeyOptions": [
+            {
+              "constraintName": "correo ",
+              "GUID": "314f4f76-97c5-4c0a-8d74-49dee33b20b2"
+            }
+          ],
+          "GUID": "b4cde6c2-7c37-4cc1-b8a4-e28ed5e782dc",
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "rol",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "description": "Rol del usuario en el sistema",
+          "required": true,
+          "enum": [
+            "docente",
+            "estudiante",
+            "secretario"
+          ],
+          "GUID": "a12c18d2-5ac8-43f5-b2ae-5e9c3832d166",
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "ae7167e9-ba2a-441f-a9d5-1a12ddf64e68"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Usuarios del sistema (docente, estudiante, secretario académico)",
+      "description": "Usuarios del sistema (docente, estudiante, secretario académico)",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "3c4552c8-b83f-47aa-a775-6ff362c42097",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [],
+      "uniqueKey": [],
+      "Indxs": [],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "usuario_organizador",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id_usuario",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "b03bec26-3b16-434f-bb50-4c3e6b8caea4",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "78e7f3f7-19b3-4f82-b01d-a29d7dd2f49e",
+          "foreignCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "foreignField": [
+            "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+          ],
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "id_evento",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": true,
+          "compositeUniqueKey": false,
+          "precision": 11,
+          "GUID": "791ca78f-8b41-4265-9aaf-6ff70e025d3d",
+          "compositeKey": [
+            "compositePrimaryKey"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "2b6298af-54de-41a5-a84b-a814e76e7f42",
+          "foreignCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "foreignField": [
+            "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+            "f579c077-624a-4b81-b9f7-90c778505945"
+          ],
+          "error": {}
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "71cc670d-cea8-4e36-968d-b0c93adb2620"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "f1348c3b-3969-480f-bacf-0f82cd30396c",
+      "code": "",
+      "bucketId": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "comments": "Responsables de un evento (docentes o estudiantes; procesos validado por trigger)",
+      "description": "Responsables de un evento (docentes o estudiantes; procesos validado por trigger)",
+      "ifNotExist": false,
+      "temporary": false,
+      "selectStatement": "",
+      "tableOptions": {
+        "GUID": "4650750a-0090-4581-ae30-05b43806ae13",
+        "defaultStorEng": false,
+        "defaultCharSet": false,
+        "ENGINE": "InnoDB",
+        "characterSet": "utf8mb4",
+        "collation": "utf8mb4_unicode_ci",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "primaryKey": [
+        {
+          "indexCategory": "",
+          "GUID": "74bfe0cc-4ae3-4702-8c9b-86c694741ebd",
+          "constraintName": "",
+          "compositePrimaryKey": [
+            {
+              "keyId": "b03bec26-3b16-434f-bb50-4c3e6b8caea4",
+              "type": "ascending"
+            },
+            {
+              "keyId": "791ca78f-8b41-4265-9aaf-6ff70e025d3d",
+              "type": "ascending"
+            }
+          ]
+        }
+      ],
+      "uniqueKey": [],
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "f782c71a-1357-4057-9e44-06e31dca6499",
+          "indxName": "fk_uo_evento",
+          "indxKey": [
+            {
+              "keyId": "791ca78f-8b41-4265-9aaf-6ff70e025d3d",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [],
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    }
+  ],
+  "buckets": [
+    {
+      "name": "sigeu_2",
+      "type": "bucket",
+      "collectionIds": [
+        "98430721-1cf1-497c-ba4e-946e625a598e",
+        "1f15d992-43ef-4607-a561-1116cc109ebe",
+        "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+        "34a2764c-6efe-4240-af95-0355ad58105a",
+        "c5786da3-abe4-4cb0-8d34-92853148ab50",
+        "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+        "211242b5-4c59-409d-8a34-475ab46c284d",
+        "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+        "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+        "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+        "0457e689-045e-4920-bf25-05fc3658c8c2",
+        "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+        "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+        "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+        "f1348c3b-3969-480f-bacf-0f82cd30396c"
+      ],
+      "backgroundColor": {
+        "r": 129,
+        "g": 212,
+        "b": 250,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "ifNotExist": true,
+      "ENCRYPTION": "No",
+      "GUID": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550",
+      "hackoladeMeta": {},
+      "UDFs": [],
+      "Procedures": []
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_contrasena_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "98430721-1cf1-497c-ba4e-946e625a598e",
+          "c0b5f285-70a9-493d-826f-7987574f6a57"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "46b27015-fdbc-47b4-aa51-7e9d60d5cfe5",
+      "parentCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "childCollection": "98430721-1cf1-497c-ba4e-946e625a598e",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_ev_evento",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "f579c077-624a-4b81-b9f7-90c778505945"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "1f15d992-43ef-4607-a561-1116cc109ebe",
+          "28a2d6b8-0c40-4ab4-ba1d-4d9dab43e6cf"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "0ef21a2c-73a7-4fb9-834d-c079d3cf2351",
+      "parentCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+      "childCollection": "1f15d992-43ef-4607-a561-1116cc109ebe",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_ev_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "1f15d992-43ef-4607-a561-1116cc109ebe",
+          "fd9339af-50ff-478c-8278-5a711b084404"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "e216b27d-88d8-482c-9d15-9db824f58d0b",
+      "parentCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "childCollection": "1f15d992-43ef-4607-a561-1116cc109ebe",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_fu_facultad",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "34a2764c-6efe-4240-af95-0355ad58105a",
+          "4493d856-dfb1-42d3-a118-96cda042e70a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "c5786da3-abe4-4cb0-8d34-92853148ab50",
+          "2194fd45-0987-436f-a28d-b03dbcc18485"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "51289279-4428-49c3-bbf9-7dcf2fc6173f",
+      "parentCollection": "34a2764c-6efe-4240-af95-0355ad58105a",
+      "childCollection": "c5786da3-abe4-4cb0-8d34-92853148ab50",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_fu_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "c5786da3-abe4-4cb0-8d34-92853148ab50",
+          "a024280b-fc78-4579-90be-5714e9439f70"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "c0f85ac4-9386-467f-865b-03f2a2c33b6e",
+      "parentCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "childCollection": "c5786da3-abe4-4cb0-8d34-92853148ab50",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_le_evento",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "f579c077-624a-4b81-b9f7-90c778505945"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "211242b5-4c59-409d-8a34-475ab46c284d",
+          "7c187a38-c4a1-4761-9b6d-b2bf43de0449"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "833952bd-69d6-4525-a5f8-d552d6055812",
+      "parentCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+      "childCollection": "211242b5-4c59-409d-8a34-475ab46c284d",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_le_lugar",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+          "fa28090a-2371-42d2-8076-c35183973348"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "211242b5-4c59-409d-8a34-475ab46c284d",
+          "cf925a1f-07d5-4c23-add6-cb92f89b1a73"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "f74dfc69-7b39-477f-a64c-10807aa1bf41",
+      "parentCollection": "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+      "childCollection": "211242b5-4c59-409d-8a34-475ab46c284d",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_pa_evento",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "f579c077-624a-4b81-b9f7-90c778505945"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+          "10bf3f6f-de6b-44b0-a1d5-b2ff346448e6"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "3abfaf2d-a5a7-4398-8964-72c1f1587f8f",
+      "parentCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+      "childCollection": "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_pa_org",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+          "5b76c1a0-653d-4c38-acd9-13ba4020747c"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+          "a33be35f-e30d-48d5-9c3c-f62bb88eb316"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "317e56b8-d1d8-4dce-bd2e-05cb16282912",
+      "parentCollection": "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+      "childCollection": "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_programa_facultad",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "34a2764c-6efe-4240-af95-0355ad58105a",
+          "4493d856-dfb1-42d3-a118-96cda042e70a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+          "1f9147a1-c877-4c48-a057-eeedf171a8be"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "10d94d56-7e6c-4fc0-a753-91a1468b1516",
+      "parentCollection": "34a2764c-6efe-4240-af95-0355ad58105a",
+      "childCollection": "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_pu_programa",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+          "bc27905d-2261-48ad-a1f6-e4d1c773793b"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0457e689-045e-4920-bf25-05fc3658c8c2",
+          "907b64d2-1dba-467a-a73c-e03a16477534"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "79ea4602-a7a1-45ca-9590-ed287c7e5f40",
+      "parentCollection": "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+      "childCollection": "0457e689-045e-4920-bf25-05fc3658c8c2",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_pu_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0457e689-045e-4920-bf25-05fc3658c8c2",
+          "39840856-6837-4d80-a5d0-b898223ff9c3"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "ba509577-81b3-43b6-b763-e47f6c53d41a",
+      "parentCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "childCollection": "0457e689-045e-4920-bf25-05fc3658c8c2",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_unidad_facultad",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "34a2764c-6efe-4240-af95-0355ad58105a",
+          "4493d856-dfb1-42d3-a118-96cda042e70a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+          "3f4049a0-110d-44bc-a26f-7d47845b9c04"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "c5367243-9dc0-42b0-8456-d9fd0b25dd1f",
+      "parentCollection": "34a2764c-6efe-4240-af95-0355ad58105a",
+      "childCollection": "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_uu_unidad",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+          "86fc6724-1c79-4784-b558-2a03d91ac570"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+          "a4ec97ee-5ced-47fc-a93c-6e77c3555053"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "88e2f5e3-489d-48be-84d5-32f63314f96d",
+      "parentCollection": "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+      "childCollection": "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_uu_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+          "7e8cea51-5e85-4663-810e-7004f0273467"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "c9abfe90-81a7-4e0c-b47c-13d1f9ca3677",
+      "parentCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "childCollection": "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_uo_evento",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+          "f579c077-624a-4b81-b9f7-90c778505945"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "f1348c3b-3969-480f-bacf-0f82cd30396c",
+          "791ca78f-8b41-4265-9aaf-6ff70e025d3d"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "2b6298af-54de-41a5-a84b-a814e76e7f42",
+      "parentCollection": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+      "childCollection": "f1348c3b-3969-480f-bacf-0f82cd30396c",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "name": "fk_uo_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+          "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "f1348c3b-3969-480f-bacf-0f82cd30396c",
+          "b03bec26-3b16-434f-bb50-4c3e6b8caea4"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "78e7f3f7-19b3-4f82-b01d-a29d7dd2f49e",
+      "parentCollection": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+      "childCollection": "f1348c3b-3969-480f-bacf-0f82cd30396c",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "e89898c2-e60a-43ef-b5d9-f5aeaedf4550": "sigeu_2",
+    "fbd8562d-32f3-4ccf-9842-4a6d4a0b0238": "id_contrasena",
+    "c0b5f285-70a9-493d-826f-7987574f6a57": "id_usuario",
+    "a5a3de41-3a10-4a89-8017-c9025f49d683": "clave",
+    "01d51cea-a514-4df2-aa11-0105b4d1e2d8": "fecha_creacion",
+    "9e600874-950a-4a76-8b83-71b7c60063ae": "vigente",
+    "98430721-1cf1-497c-ba4e-946e625a598e": "contrasena",
+    "d718fbac-4ab6-4335-96b1-05061bf5a762": "id_evaluacion",
+    "558f2398-7354-4f91-8171-21c74b7ec0dc": "justificacion",
+    "c5795a07-af40-47fa-b451-4edd342aac2d": "acta_pdf_url",
+    "f94728ce-1196-481d-ada6-3b832c7c52d3": "fecha_evaluacion",
+    "702ebcd6-9c7d-4780-8392-195cc3668eb2": "estado",
+    "28a2d6b8-0c40-4ab4-ba1d-4d9dab43e6cf": "id_evento",
+    "fd9339af-50ff-478c-8278-5a711b084404": "id_usuario",
+    "1f15d992-43ef-4607-a561-1116cc109ebe": "evaluacion_evento",
+    "f579c077-624a-4b81-b9f7-90c778505945": "id_evento",
+    "af4f5780-f428-4a30-aa7e-d9e97f33636f": "nombre_evento",
+    "ef11c7d6-ff2d-4fb6-9b16-4e350dde3dd5": "tipo",
+    "7543d368-d1fe-4806-8011-a0e7b2f399df": "descripcion",
+    "3960a4a1-14a3-40fe-9b7b-feb5f5b541f7": "fecha_evento",
+    "15c4f2a1-74d7-487d-b456-259c3ef4a901": "hora_inicio",
+    "af794e65-dd82-4002-b768-ccfc9d5db9bb": "hora_fin",
+    "7d6f7424-6480-4196-8bb8-a074c805e81e": "estado",
+    "4b35b3e0-2a29-43e1-8ce6-d7e78758d051": "aval_pdf_url",
+    "ed371c6e-fbfa-4ffc-9701-2e9d5301ae4c": "aval_tipo",
+    "e5f1c2a6-112c-49e0-9772-7f8bf822c50e": "evento",
+    "4493d856-dfb1-42d3-a118-96cda042e70a": "id_facultad",
+    "89bef7c1-b4be-40a3-8c61-98c284bde946": "nombre",
+    "4b387689-f476-40fb-84ae-20204001c835": "telefono",
+    "34a2764c-6efe-4240-af95-0355ad58105a": "facultad",
+    "2194fd45-0987-436f-a28d-b03dbcc18485": "id_facultad",
+    "a024280b-fc78-4579-90be-5714e9439f70": "id_usuario",
+    "c5786da3-abe4-4cb0-8d34-92853148ab50": "facultad_usuario",
+    "fa28090a-2371-42d2-8076-c35183973348": "id_lugar",
+    "d6547c64-5e7f-49a9-ac41-70757a0ea58f": "ubicacion",
+    "8d0944f3-92b0-48a5-8c7c-8e65c2c94cc7": "capacidad",
+    "2dd0e5d1-63da-49fb-8894-1161cc6bf643": "tipo",
+    "7ad0295d-cbde-4e89-9323-c29b17699cc9": "lugar",
+    "cf925a1f-07d5-4c23-add6-cb92f89b1a73": "id_lugar",
+    "7c187a38-c4a1-4761-9b6d-b2bf43de0449": "id_evento",
+    "211242b5-4c59-409d-8a34-475ab46c284d": "lugar_evento",
+    "5b76c1a0-653d-4c38-acd9-13ba4020747c": "id_organizacion",
+    "99c5ac24-0f16-4bff-8d2f-9fb0199ea154": "nombre",
+    "23aaa9c9-88dd-4bc5-ae50-9376914af3c9": "nombre_representante_legal",
+    "7e080a58-e87c-44db-a2ba-c55b02d27ef4": "ubicacion",
+    "9d05a74d-fb52-4821-a278-0ad2b3117205": "sector_economico",
+    "9a792bfb-9f45-4d09-8bce-0a69e77a7b79": "actividad_principal",
+    "436f1265-274f-4ea7-bd9f-d15dee23839c": "numero_contacto",
+    "7f5ee42a-11ec-4319-9f6a-b0262f44e64e": "organizacion_externa",
+    "a33be35f-e30d-48d5-9c3c-f62bb88eb316": "id_organizacion",
+    "10bf3f6f-de6b-44b0-a1d5-b2ff346448e6": "id_evento",
+    "8440a097-d101-4b4d-9802-d82b4aa99458": "certificado_participacion_url",
+    "054782ec-c719-4840-903b-004ab47f73d7": "asistira_representante_legal",
+    "9726a527-2ca1-4256-8f1c-de549839a0c9": "nombre_representante_alternativo",
+    "82a52cfe-fae4-4f1d-8f07-0142322e4ece": "participa",
+    "bc27905d-2261-48ad-a1f6-e4d1c773793b": "id_programa",
+    "f2dae832-821b-4351-ba3a-b763eb55dd41": "nombre",
+    "1f9147a1-c877-4c48-a057-eeedf171a8be": "id_facultad",
+    "50b7d551-c6ec-415c-b7dd-b34e42486e2e": "programa_academico",
+    "907b64d2-1dba-467a-a73c-e03a16477534": "id_programa",
+    "39840856-6837-4d80-a5d0-b898223ff9c3": "id_usuario",
+    "0457e689-045e-4920-bf25-05fc3658c8c2": "programa_usuario",
+    "86fc6724-1c79-4784-b558-2a03d91ac570": "id_unidad",
+    "1a19787c-eec0-4dad-a305-911b5a455254": "nombre",
+    "3f4049a0-110d-44bc-a26f-7d47845b9c04": "id_facultad",
+    "f8a77b2b-76c9-4969-ba5c-e6887697b69c": "unidad_academica",
+    "a4ec97ee-5ced-47fc-a93c-6e77c3555053": "id_unidad",
+    "7e8cea51-5e85-4663-810e-7004f0273467": "id_usuario",
+    "74af8042-d6be-4618-bfc7-d194f3b0f05a": "unidad_usuario",
+    "e730b3ab-2d5c-4d78-8e9c-631b0d8aa3b0": "id_usuario",
+    "4aea5295-f279-407f-a85e-e35f6459ff19": "nombre",
+    "a9bb6e1a-a39f-440d-bb60-59a5dff2dfff": "apellido",
+    "b4cde6c2-7c37-4cc1-b8a4-e28ed5e782dc": "correo",
+    "a12c18d2-5ac8-43f5-b2ae-5e9c3832d166": "rol",
+    "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2": "usuario",
+    "b03bec26-3b16-434f-bb50-4c3e6b8caea4": "id_usuario",
+    "791ca78f-8b41-4265-9aaf-6ff70e025d3d": "id_evento",
+    "f1348c3b-3969-480f-bacf-0f82cd30396c": "usuario_organizador",
+    "46b27015-fdbc-47b4-aa51-7e9d60d5cfe5": "fk_contrasena_usuario",
+    "0ef21a2c-73a7-4fb9-834d-c079d3cf2351": "fk_ev_evento",
+    "e216b27d-88d8-482c-9d15-9db824f58d0b": "fk_ev_usuario",
+    "51289279-4428-49c3-bbf9-7dcf2fc6173f": "fk_fu_facultad",
+    "c0f85ac4-9386-467f-865b-03f2a2c33b6e": "fk_fu_usuario",
+    "833952bd-69d6-4525-a5f8-d552d6055812": "fk_le_evento",
+    "f74dfc69-7b39-477f-a64c-10807aa1bf41": "fk_le_lugar",
+    "3abfaf2d-a5a7-4398-8964-72c1f1587f8f": "fk_pa_evento",
+    "317e56b8-d1d8-4dce-bd2e-05cb16282912": "fk_pa_org",
+    "10d94d56-7e6c-4fc0-a753-91a1468b1516": "fk_programa_facultad",
+    "79ea4602-a7a1-45ca-9590-ed287c7e5f40": "fk_pu_programa",
+    "ba509577-81b3-43b6-b763-e47f6c53d41a": "fk_pu_usuario",
+    "c5367243-9dc0-42b0-8456-d9fd0b25dd1f": "fk_unidad_facultad",
+    "88e2f5e3-489d-48be-84d5-32f63314f96d": "fk_uu_unidad",
+    "c9abfe90-81a7-4e0c-b47c-13d1f9ca3677": "fk_uu_usuario",
+    "2b6298af-54de-41a5-a84b-a814e76e7f42": "fk_uo_evento",
+    "78e7f3f7-19b3-4f82-b01d-a29d7dd2f49e": "fk_uo_usuario"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "843e571d-c2fe-4b83-ae90-e96bf3b19b85"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "5b2304e8-902d-4b1c-8866-1ee4c7547999"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "7565d347-ff4a-4c16-91a5-2a83477c5c59"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "dbVersion": "v9.x",
+  "dbVendor": "MySQL",
+  "appTarget": "MySQL",
+  "creationTS": "2025-11-11T03:14:26.156Z",
+  "GUID": "21e504da-d3ab-4836-9af1-be7b2b096e6f",
+  "isLineageEnabled": false,
+  "code": "",
+  "lastModifTS": "2025-11-11T03:19:42.269Z",
+  "persistenceSchemaVersion": "8",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "MySQL",
+    "pluginVersion": "0.2.18",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "8.5.5"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "98430721-1cf1-497c-ba4e-946e625a598e",
+            "x": 1714,
+            "y": 1364,
+            "width": 298,
+            "height": 120,
+            "color": {}
+          },
+          {
+            "GUID": "1f15d992-43ef-4607-a561-1116cc109ebe",
+            "x": 1764,
+            "y": 1764,
+            "width": 316,
+            "height": 156,
+            "color": {}
+          },
+          {
+            "GUID": "e5f1c2a6-112c-49e0-9772-7f8bf822c50e",
+            "x": 1364,
+            "y": 1114,
+            "width": 278,
+            "height": 210,
+            "color": {}
+          },
+          {
+            "GUID": "34a2764c-6efe-4240-af95-0355ad58105a",
+            "x": 2014,
+            "y": 2014,
+            "width": 244,
+            "height": 84,
+            "color": {}
+          },
+          {
+            "GUID": "c5786da3-abe4-4cb0-8d34-92853148ab50",
+            "x": 1064,
+            "y": 1314,
+            "width": 247,
+            "height": 66,
+            "color": {}
+          },
+          {
+            "GUID": "7ad0295d-cbde-4e89-9323-c29b17699cc9",
+            "x": 1414,
+            "y": 2014,
+            "width": 246,
+            "height": 102,
+            "color": {}
+          },
+          {
+            "GUID": "211242b5-4c59-409d-8a34-475ab46c284d",
+            "x": 2014,
+            "y": 1064,
+            "width": 241,
+            "height": 66,
+            "color": {}
+          },
+          {
+            "GUID": "7f5ee42a-11ec-4319-9f6a-b0262f44e64e",
+            "x": 1314,
+            "y": 1764,
+            "width": 351,
+            "height": 156,
+            "color": {}
+          },
+          {
+            "GUID": "82a52cfe-fae4-4f1d-8f07-0142322e4ece",
+            "x": 1564,
+            "y": 1564,
+            "width": 416,
+            "height": 120,
+            "color": {}
+          },
+          {
+            "GUID": "50b7d551-c6ec-415c-b7dd-b34e42486e2e",
+            "x": 1364,
+            "y": 1414,
+            "width": 287,
+            "height": 84,
+            "color": {}
+          },
+          {
+            "GUID": "0457e689-045e-4920-bf25-05fc3658c8c2",
+            "x": 1864,
+            "y": 1214,
+            "width": 258,
+            "height": 66,
+            "color": {}
+          },
+          {
+            "GUID": "f8a77b2b-76c9-4969-ba5c-e6887697b69c",
+            "x": 1214,
+            "y": 1564,
+            "width": 276,
+            "height": 84,
+            "color": {}
+          },
+          {
+            "GUID": "74af8042-d6be-4618-bfc7-d194f3b0f05a",
+            "x": 1714,
+            "y": 2014,
+            "width": 245,
+            "height": 66,
+            "color": {}
+          },
+          {
+            "GUID": "242bfe8b-1b5d-4bd6-a3a4-d834d727eed2",
+            "x": 1064,
+            "y": 1114,
+            "width": 248,
+            "height": 120,
+            "color": {}
+          },
+          {
+            "GUID": "f1348c3b-3969-480f-bacf-0f82cd30396c",
+            "x": 1064,
+            "y": 2014,
+            "width": 253,
+            "height": 66,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 1000,
+            "y": 1000,
+            "GUID": "e89898c2-e60a-43ef-b5d9-f5aeaedf4550"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}

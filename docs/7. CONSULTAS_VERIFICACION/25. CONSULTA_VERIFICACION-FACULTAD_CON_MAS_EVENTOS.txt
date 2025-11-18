@@ -1,0 +1,3 @@
+db.evento.aggregate([
+  { $group: { _id: "$facultad_id", total: { $sum: 1 } } }
+]);

@@ -1,0 +1,12 @@
+db.evento.insertOne({
+  nombre_evento: "Prueba Evento",
+  tipo: "academico",
+  descripcion: "evento de prueba",
+  fecha_evento: new Date(),
+  hora_inicio: new Date(),
+  hora_fin: new Date(),
+  estado: "registrado",
+  aval_pdf_url: "http://example.com",
+  aval_tipo: "director_programa",
+  facultad_id: facIngId
+});

@@ -1,0 +1,298 @@
+//PARA EJECUTAR EN SHELL
+
+use('sigeu_2');
+
+function recreateCollection(name, options) {
+  try { db[name].drop(); } catch(e) {}
+  db.createCollection(name, options || {});
+}
+
+// usuario
+recreateCollection('usuario', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['nombre','apellido','correo','rol'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        nombre: { bsonType: 'string', minLength: 1 },
+        apellido: { bsonType: 'string', minLength: 1 },
+        correo: { bsonType: 'string', minLength: 5 },
+        rol: { enum: ['docente','estudiante','secretario'] }
+      }
+    }
+  },
+  validationLevel: 'moderate'
+});
+db.usuario.createIndex({ correo: 1 }, { unique: true, name: 'uk_usuario_correo' });
+db.usuario.createIndex({ rol: 1 }, { name: 'ix_usuario_rol' });
+
+// contrasena
+recreateCollection('contrasena', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['usuario_id','clave','fecha_creacion','vigente'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        usuario_id: { bsonType: 'objectId' },
+        clave: { bsonType: 'string', minLength: 8 },
+        fecha_creacion: { bsonType: 'date' },
+        vigente: { bsonType: 'bool' }
+      }
+    }
+  }
+});
+db.contrasena.createIndex({ usuario_id: 1 }, { name: 'ix_contrasena_usuario' });
+
+// facultad
+recreateCollection('facultad', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['nombre'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        nombre: { bsonType: 'string', minLength: 1 },
+        telefono: { bsonType: ['string','null'] }
+      }
+    }
+  }
+});
+db.facultad.createIndex({ nombre: 1 }, { unique: true, sparse: true, name: 'uk_facultad_nombre' });
+
+// unidad_academica
+recreateCollection('unidad_academica', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['nombre','facultad_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        nombre: { bsonType: 'string', minLength: 1 },
+        facultad_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.unidad_academica.createIndex({ facultad_id: 1 }, { name: 'ix_unidad_facultad' });
+
+// programa_academico
+recreateCollection('programa_academico', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['nombre','facultad_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        nombre: { bsonType: 'string', minLength: 1 },
+        facultad_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.programa_academico.createIndex({ facultad_id: 1 }, { name: 'ix_programa_facultad' });
+
+// programa_usuario
+recreateCollection('programa_usuario', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['programa_id','usuario_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        programa_id: { bsonType: 'objectId' },
+        usuario_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.programa_usuario.createIndex({ programa_id: 1, usuario_id: 1 }, { unique: true, name: 'uk_programa_usuario' });
+db.programa_usuario.createIndex({ usuario_id: 1 }, { name: 'ix_pu_usuario' });
+
+// unidad_usuario
+recreateCollection('unidad_usuario', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['unidad_id','usuario_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        unidad_id: { bsonType: 'objectId' },
+        usuario_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.unidad_usuario.createIndex({ unidad_id: 1, usuario_id: 1 }, { unique: true, name: 'uk_unidad_usuario' });
+
+// facultad_usuario
+recreateCollection('facultad_usuario', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['facultad_id','usuario_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        facultad_id: { bsonType: 'objectId' },
+        usuario_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.facultad_usuario.createIndex({ facultad_id: 1, usuario_id: 1 }, { unique: true, name: 'uk_facultad_usuario' });
+
+// lugar
+recreateCollection('lugar', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['ubicacion','capacidad','tipo'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        ubicacion: { bsonType: 'string', minLength: 1 },
+        capacidad: { bsonType: 'int', minimum: 0 },
+        tipo: { enum: ['salon','auditorio','laboratorio','cancha','otro'] }
+      }
+    }
+  }
+});
+db.lugar.createIndex({ tipo: 1 }, { name: 'ix_lugar_tipo' });
+
+// evento
+recreateCollection('evento', {
+  validator: {
+    $and: [
+      { $jsonSchema: {
+          bsonType: 'object',
+          required: ['nombre_evento','tipo','fecha_evento','hora_inicio','hora_fin','estado','aval_pdf_url','aval_tipo'],
+          additionalProperties: false,
+          properties: {
+            _id: { bsonType: 'objectId' },
+            nombre_evento: { bsonType: 'string', minLength: 1 },
+            tipo: { enum: ['ludico','academico'] },
+            descripcion: { bsonType: ['string','null'] },
+            fecha_evento: { bsonType: 'date' },
+            hora_inicio: { bsonType: 'date' },
+            hora_fin: { bsonType: 'date' },
+            estado: { enum: ['registrado','en_revision','aprobado','rechazado'] },
+            aval_pdf_url: { bsonType: 'string' },
+            aval_tipo: { enum: ['director_programa','director_docencia'] },
+            facultad_id: { bsonType: ['objectId','null'] }
+          }
+        }
+      },
+      { $expr: { $gt: ['$hora_fin', '$hora_inicio'] } }
+    ]
+  }
+});
+db.evento.createIndex({ fecha_evento: 1 }, { name: 'ix_evento_fecha' });
+db.evento.createIndex({ estado: 1 }, { name: 'ix_evento_estado' });
+
+// usuario_organizador
+recreateCollection('usuario_organizador', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['usuario_id','evento_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        usuario_id: { bsonType: 'objectId' },
+        evento_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.usuario_organizador.createIndex({ usuario_id: 1, evento_id: 1 }, { unique: true, name: 'uk_usuario_organizador' });
+
+// lugar_evento
+recreateCollection('lugar_evento', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['lugar_id','evento_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        lugar_id: { bsonType: 'objectId' },
+        evento_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.lugar_evento.createIndex({ lugar_id: 1, evento_id: 1 }, { unique: true, name: 'uk_lugar_evento' });
+
+// evaluacion_evento
+recreateCollection('evaluacion_evento', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['fecha_evaluacion','estado','evento_id','usuario_id'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        justificacion: { bsonType: ['string','null'] },
+        acta_pdf_url: { bsonType: ['string','null'] },
+        fecha_evaluacion: { bsonType: 'date' },
+        estado: { enum: ['aprobado','rechazado'] },
+        evento_id: { bsonType: 'objectId' },
+        usuario_id: { bsonType: 'objectId' }
+      }
+    }
+  }
+});
+db.evaluacion_evento.createIndex({ evento_id: 1 }, { name: 'ix_eval_evento' });
+db.evaluacion_evento.createIndex({ usuario_id: 1 }, { name: 'ix_eval_usuario' });
+
+// organizacion_externa
+recreateCollection('organizacion_externa', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['nombre','nombre_representante_legal','ubicacion'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        nombre: { bsonType: 'string', minLength: 1 },
+        nombre_representante_legal: { bsonType: 'string', minLength: 1 },
+        ubicacion: { bsonType: 'string', minLength: 1 },
+        sector_economico: { bsonType: ['string','null'] },
+        actividad_principal: { bsonType: ['string','null'] },
+        numero_contacto: { bsonType: ['string','null'] }
+      }
+    }
+  }
+});
+db.organizacion_externa.createIndex({ nombre: 1 }, { name: 'ix_org_nombre' });
+
+// participa
+recreateCollection('participa', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['organizacion_id','evento_id','asistira_representante_legal'],
+      additionalProperties: false,
+      properties: {
+        _id: { bsonType: 'objectId' },
+        organizacion_id: { bsonType: 'objectId' },
+        evento_id: { bsonType: 'objectId' },
+        certificado_participacion_url: { bsonType: ['string','null'] },
+        asistira_representante_legal: { bsonType: 'bool' },
+        nombre_representante_alternativo: { bsonType: ['string','null'] }
+      }
+    }
+  }
+});
+db.participa.createIndex({ organizacion_id: 1, evento_id: 1 }, { unique: true, name: 'uk_participa' });
+
+print('SIGEU_2 – Colecciones creadas con validadores e índices.');

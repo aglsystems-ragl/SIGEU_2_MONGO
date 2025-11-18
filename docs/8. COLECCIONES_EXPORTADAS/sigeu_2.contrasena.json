@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "691ba800c3779517a973525d"
+  },
+  "usuario_id": {
+    "$oid": "691ba800c3779517a9735259"
+  },
+  "clave": "clave123",
+  "fecha_creacion": {
+    "$date": "2025-11-17T22:56:00.196Z"
+  },
+  "vigente": true
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a973525e"
+  },
+  "usuario_id": {
+    "$oid": "691ba800c3779517a973525a"
+  },
+  "clave": "clave456",
+  "fecha_creacion": {
+    "$date": "2025-11-17T22:56:00.196Z"
+  },
+  "vigente": true
+}]

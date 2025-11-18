@@ -1,0 +1,1 @@
+db.usuario.deleteOne({ correo: "prueba.demo@uao.edu.co" });

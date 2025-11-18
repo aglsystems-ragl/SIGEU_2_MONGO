@@ -1,0 +1,12 @@
+[{
+  "_id": "estudiante",
+  "total": 10
+},
+{
+  "_id": "secretario",
+  "total": 4
+},
+{
+  "_id": "docente",
+  "total": 5
+}]

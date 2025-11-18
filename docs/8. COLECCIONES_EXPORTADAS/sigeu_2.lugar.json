@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "691ba800c3779517a9735276"
+  },
+  "ubicacion": "Auditorio Central",
+  "capacidad": 200,
+  "tipo": "auditorio"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735277"
+  },
+  "ubicacion": "Sala 201",
+  "capacidad": 60,
+  "tipo": "salon"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735278"
+  },
+  "ubicacion": "Laboratorio de Computo",
+  "capacidad": 40,
+  "tipo": "laboratorio"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735279"
+  },
+  "ubicacion": "Cancha Múltiple",
+  "capacidad": 150,
+  "tipo": "cancha"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a973527a"
+  },
+  "ubicacion": "Sala de Conferencias",
+  "capacidad": 80,
+  "tipo": "salon"
+}]

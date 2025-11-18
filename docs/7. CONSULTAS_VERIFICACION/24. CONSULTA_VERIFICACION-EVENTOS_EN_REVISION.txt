@@ -1,0 +1,1 @@
+db.evento.find({ estado: "en_revision" });

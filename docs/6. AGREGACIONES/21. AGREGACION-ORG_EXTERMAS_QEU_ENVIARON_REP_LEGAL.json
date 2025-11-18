@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "691ba800c3779517a973528f"
+  },
+  "organizacion_id": {
+    "$oid": "691ba800c3779517a973528a"
+  },
+  "evento_id": {
+    "$oid": "691ba800c3779517a973527b"
+  },
+  "certificado_participacion_url": "http://cert1.pdf",
+  "asistira_representante_legal": true,
+  "nombre_representante_alternativo": null,
+  "organizacion": [
+    {
+      "_id": {
+        "$oid": "691ba800c3779517a973528a"
+      },
+      "nombre": "TechEdu SAS",
+      "nombre_representante_legal": "Carlos Martínez",
+      "ubicacion": "Cali",
+      "sector_economico": "Tecnología",
+      "actividad_principal": "Software educativo",
+      "numero_contacto": "3001112233"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735291"
+  },
+  "organizacion_id": {
+    "$oid": "691ba800c3779517a973528c"
+  },
+  "evento_id": {
+    "$oid": "691ba800c3779517a973527d"
+  },
+  "certificado_participacion_url": "http://cert3.pdf",
+  "asistira_representante_legal": true,
+  "nombre_representante_alternativo": null,
+  "organizacion": [
+    {
+      "_id": {
+        "$oid": "691ba800c3779517a973528c"
+      },
+      "nombre": "Emprendimientos Futuro",
+      "nombre_representante_legal": "Miguel Ruiz",
+      "ubicacion": "Cali",
+      "sector_economico": "Servicios",
+      "actividad_principal": "Aceleradora",
+      "numero_contacto": "3003334455"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735292"
+  },
+  "organizacion_id": {
+    "$oid": "691ba800c3779517a973528d"
+  },
+  "evento_id": {
+    "$oid": "691ba800c3779517a973527e"
+  },
+  "certificado_participacion_url": "http://cert4.pdf",
+  "asistira_representante_legal": true,
+  "nombre_representante_alternativo": null,
+  "organizacion": [
+    {
+      "_id": {
+        "$oid": "691ba800c3779517a973528d"
+      },
+      "nombre": "Deportes UAO",
+      "nombre_representante_legal": "Paula Mejía",
+      "ubicacion": "Cali",
+      "sector_economico": "Deporte",
+      "actividad_principal": "Eventos deportivos",
+      "numero_contacto": "3004445566"
+    }
+  ]
+}]

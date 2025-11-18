@@ -1,0 +1,4 @@
+db.usuario.updateOne(
+  { correo: "prueba.demo@uao.edu.co" },
+  { $set: { apellido: "Modificado" } }
+);

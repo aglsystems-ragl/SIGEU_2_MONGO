@@ -1,0 +1,6 @@
+db.usuario.insertOne({
+  nombre: "Prueba",
+  apellido: "Demo",
+  correo: "prueba.demo@uao.edu.co",
+  rol: "estudiante"
+});

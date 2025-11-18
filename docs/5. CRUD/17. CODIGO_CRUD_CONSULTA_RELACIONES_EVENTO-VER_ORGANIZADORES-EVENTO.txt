@@ -1,0 +1,12 @@
+db.usuario_organizador.aggregate([
+  { $match: { evento_id: ev1 } },
+  {
+    $lookup: {
+      from: "usuario",
+      localField: "usuario_id",
+      foreignField: "_id",
+      as: "usuario"
+    }
+  },
+  { $unwind: "$usuario" }
+]);

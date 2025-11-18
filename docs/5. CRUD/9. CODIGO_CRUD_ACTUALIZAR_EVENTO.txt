@@ -1,0 +1,4 @@
+db.evento.updateOne(
+  { nombre_evento: "Prueba Evento" },
+  { $set: { estado: "en_revision" } }
+);

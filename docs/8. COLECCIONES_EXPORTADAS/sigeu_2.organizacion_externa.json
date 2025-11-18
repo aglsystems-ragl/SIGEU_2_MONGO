@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "691ba800c3779517a973528a"
+  },
+  "nombre": "TechEdu SAS",
+  "nombre_representante_legal": "Carlos Martínez",
+  "ubicacion": "Cali",
+  "sector_economico": "Tecnología",
+  "actividad_principal": "Software educativo",
+  "numero_contacto": "3001112233"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a973528b"
+  },
+  "nombre": "DataLab Consulting",
+  "nombre_representante_legal": "Lucía Herrera",
+  "ubicacion": "Bogotá",
+  "sector_economico": "Consultoría",
+  "actividad_principal": "Analítica de datos",
+  "numero_contacto": "3002223344"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a973528c"
+  },
+  "nombre": "Emprendimientos Futuro",
+  "nombre_representante_legal": "Miguel Ruiz",
+  "ubicacion": "Cali",
+  "sector_economico": "Servicios",
+  "actividad_principal": "Aceleradora",
+  "numero_contacto": "3003334455"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a973528d"
+  },
+  "nombre": "Deportes UAO",
+  "nombre_representante_legal": "Paula Mejía",
+  "ubicacion": "Cali",
+  "sector_economico": "Deporte",
+  "actividad_principal": "Eventos deportivos",
+  "numero_contacto": "3004445566"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a973528e"
+  },
+  "nombre": "EcoCircular ONG",
+  "nombre_representante_legal": "Juanita Torres",
+  "ubicacion": "Palmira",
+  "sector_economico": "Social",
+  "actividad_principal": "Sostenibilidad",
+  "numero_contacto": "3005556677"
+}]

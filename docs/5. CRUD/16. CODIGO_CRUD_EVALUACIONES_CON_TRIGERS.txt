@@ -1,0 +1,7 @@
+evaluarEvento({
+  eventoId: ev2,
+  usuarioEvaluadorId: uSec1,
+  estado: "aprobado",
+  justificacion: "Correcto",
+  actaPdfUrl: "http://prueba.pdf"
+});

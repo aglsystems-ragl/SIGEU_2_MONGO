@@ -1,0 +1,12 @@
+db.programa_usuario.aggregate([
+  { $match: { programa_id: progSisId } },
+  {
+    $lookup: {
+      from: "usuario",
+      localField: "usuario_id",
+      foreignField: "_id",
+      as: "usuario"
+    }
+  },
+  { $unwind: "$usuario" }
+]);

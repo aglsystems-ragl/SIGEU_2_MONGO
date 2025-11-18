@@ -1,0 +1,11 @@
+db.participa.aggregate([
+  { $match: { asistira_representante_legal: true } },
+  {
+    $lookup: {
+      from: "organizacion_externa",
+      localField: "organizacion_id",
+      foreignField: "_id",
+      as: "organizacion"
+    }
+  }
+]);

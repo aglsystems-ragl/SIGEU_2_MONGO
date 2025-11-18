@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "691ba800c3779517a9735241"
+  },
+  "nombre": "Facultad de Ingeniería",
+  "telefono": "6023456789"
+},
+{
+  "_id": {
+    "$oid": "691ba800c3779517a9735242"
+  },
+  "nombre": "Facultad de Ciencias Económicas",
+  "telefono": "6029876543"
+},
+{
+  "_id": {
+    "$oid": "691c0ac54d50c47bf0a18467"
+  },
+  "nombre": "Facultad de Artes y Humanidades",
+  "telefono": null
+}]

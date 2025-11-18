@@ -1,0 +1,8 @@
+db.organizacion_externa.insertOne({
+  nombre: "Nueva Org",
+  nombre_representante_legal: "Carlos Reyes",
+  ubicacion: "Cali",
+  sector_economico: "Tecnología",
+  actividad_principal: "Software",
+  numero_contacto: "3012345678"
+});

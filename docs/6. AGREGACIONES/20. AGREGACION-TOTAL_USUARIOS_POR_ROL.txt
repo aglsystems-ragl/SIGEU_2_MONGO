@@ -1,0 +1,8 @@
+db.usuario.aggregate([
+  {
+    $group: {
+      _id: "$rol",
+      total: { $sum: 1 }
+    }
+  }
+]);
