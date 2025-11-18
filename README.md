@@ -202,7 +202,7 @@ Incluye validaciones de:
 
 ```bash
 py -3.11 -m venv sigeu2_venv
-sigeu2_venv\Scriptsctivate
+sigeu2_venv\Scriptsactivate
 ```
 
 ### Instalar dependencias
